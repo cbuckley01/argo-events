@@ -187,12 +187,12 @@
           "description": "SASLMechanism is the name of the enabled SASL mechanism. Possible values: OAUTHBEARER, PLAIN (defaults to PLAIN).",
           "type": "string"
         },
-        "password": {
-          "description": "Password for SASL/PLAIN authentication",
+        "passwordSecret": {
+          "description": "passwordSecretis the Kubernetes secret containing the password for SASL/PLAIN authentication",
           "$ref": "#/definitions/io.k8s.api.core.v1.SecretKeySelector"
         },
-        "user": {
-          "description": "User is the authentication identity (authcid) to present for SASL/PLAIN or SASL/SCRAM authentication",
+        "userSecret": {
+          "description": "userSecret is the Kubernetes secret containing the authentication identity (authcid) to present for SASL/PLAIN or SASL/SCRAM authentication",
           "$ref": "#/definitions/io.k8s.api.core.v1.SecretKeySelector"
         }
       }
