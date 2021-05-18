@@ -96,7 +96,7 @@ func TestValidateSASLConfig(t *testing.T) {
 		s := &SASLConfig{}
 		err := ValidateSASLConfig(s)
 		assert.NotNil(t, err)
-		assert.True(t, strings.Contains(err.Error(), "invalid sasl config, both user and password must be defined"))
+		assert.True(t, strings.Contains(err.Error(), "invalid sasl config, both userSecret and passwordSecret must be defined"))
 	})
 
 	t.Run("test invalid Mechanism is set", func(t *testing.T) {

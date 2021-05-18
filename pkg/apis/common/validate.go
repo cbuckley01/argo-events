@@ -44,7 +44,7 @@ func ValidateSASLConfig(saslConfig *SASLConfig) error {
 
 	// user and password must both be set
 	if saslConfig.UserSecret == nil || saslConfig.PasswordSecret == nil {
-		return errors.New("invalid sasl config, both user and password must be defined")
+		return errors.New("invalid sasl config, both userSecret and passwordSecret must be defined")
 	}
 
 	return nil
